@@ -15,8 +15,8 @@ function style() {
     return gulp.src('./app/precss/style.less')  
             .pipe(sourcemaps.init())    
             // .pipe(sass().on('error', sass.logError))  / /sass uchun  
-            .pipe(less())
             .pipe(plumber())
+            .pipe(less())
             .pipe(autoprefixer({
                 browsers: ['last 20 versions'],
                 cascade: true
